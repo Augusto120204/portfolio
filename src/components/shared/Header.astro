@@ -1,0 +1,27 @@
+---
+const pages = [
+  { label: "Home", url: "/" },
+  { label: "About me", url: "/about/" },
+  { label: "Skills", url: "/skills/" },
+  { label: "Projects", url: "/projects/" },
+  { label: "Contact me", url: "/contact/" },
+];
+---
+
+<header
+  class="bg-primary h-full sticky top-0 z-10
+grid grid-cols-(--cols-header) max-lg:grid-cols-3 items-center px-3 border-b-8"
+>
+  <div class="max-lg:col-start-2 flex">
+    <i class="fa-solid fa-code mr-4"></i>
+    <p><span>Augusto</span> Salazar</p>
+  </div>
+  <nav class="flex justify-center h-full max-lg:hidden">
+    {pages.map((page) =>
+    <a class="px-4 mt-auto pt-1 pb-4 rounded-t-2xl pb-auto
+    hover:bg-secondary transition-colors delay-150 duration-700"
+    href={page.url}>
+        {page.label}
+        </a>)}
+  </nav>
+</header>

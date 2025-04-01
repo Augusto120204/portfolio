@@ -1,9 +1,9 @@
 ---
 import "../styles/global.css";
 import "../styles/font.css";
+import Header from "../components/shared/Header.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,12 +13,14 @@ import "../styles/font.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<link rel="icon" type="image/png" href="/icon_virus.webp">
+		<title>{title}</title>
 	</head>
 	<body
 	class="m-0 p-0 min-h-screen
 	font-teko text-white md:text-3xl text-2xl
-	grid-layout">
+	grid grid-rows-(--rows-layout) max-lg:grid-rows-(--rows-layout-movil)">
+		<Header />
 		<slot />
 	</body>
 </html>

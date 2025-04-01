@@ -29,6 +29,7 @@ const goal = 3;
 ---
 
 <Layout>
+  <div class="bg-black">
   <a href="/">Inicio</a>
   <a href="/about/">Sobre mi</a>
   <h1>{pageTitle}</h1>
@@ -51,7 +52,7 @@ const goal = 3;
     {
       identity.hobbies.length >= 2 && (
         <li>
-          Dos de mis aficiones son: {identity.hobbies[0]} y{" "}
+          Dos de mis aficiones son: {identity.hobbies[0]} y 
           {identity.hobbies[1]}
         </li>
       )
@@ -73,4 +74,5 @@ const goal = 3;
       <p>Mi objetivo no son 3 días.</p>
     )
   }
+  </div>
 </Layout>
